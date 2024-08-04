@@ -12,10 +12,10 @@ const JWT_SECRET = "Stilli@mhere101";
 router.post(
   "/createuser",
   [
-    body("name", "Enter a valid name").isLength({ min: 3 }),
+    body("name", "Enter a valid name").isLength({ min: 1 }),
     body("email", "Enter a valid email").isEmail(),
     body("password", " Password must be atleast 5 character").isLength({
-      min: 5,
+      min: 1,
     }),
   ],
   async (req, res) => {
