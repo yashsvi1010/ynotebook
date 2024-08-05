@@ -19,6 +19,8 @@ router.post(
     }),
   ],
   async (req, res) => {
+    let success = false;
+
     //If there are errors, return bad request and the errors
 
     const errors = validationResult(req);
@@ -33,7 +35,10 @@ router.post(
       if (user) {
         return res
           .status(400)
-          .json({ error: "Sorry a user with this email already exists" });
+          .json({
+            success,
+            error: "Sorry a user with this email already exists",
+          });
       }
 
       // Securing password by using salt- bycrypt
@@ -55,7 +60,8 @@ router.post(
       const authtoken = jwt.sign(data, JWT_SECRET);
 
       // res.json(user);
-      res.json({ authtoken });
+      success = true;
+      res.json({ success, authtoken });
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal Server Error");
