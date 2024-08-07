@@ -15,12 +15,14 @@ const Noteitem = (props) => {
               className="far fa-trash-alt mx-2"
               onClick={() => {
                 deleteNote(note._id);
+                props.showAlert("Deleted successfully", "success");
               }}
             ></i>
             <i
               className="far fa-edit mx-2"
               onClick={() => {
                 updateNote(note);
+                props.showAlert("Updated successfully", "success");
               }}
             ></i>
           </div>
