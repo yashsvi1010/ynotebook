@@ -76,7 +76,7 @@ const AddNote = () => {
           />
         </div>
         <button
-          // disabled={note.title.length < 3 || note.description.length < 3}
+          disabled={note.title.length < 3 || note.description.length < 3}
           type="submit"
           className="btn btn-primary"
           onClick={handleClick}
