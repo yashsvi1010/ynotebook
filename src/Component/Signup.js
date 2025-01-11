@@ -101,7 +101,7 @@ const Signup = (props) => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn submit-btn">
           Submit
         </button>
       </form>

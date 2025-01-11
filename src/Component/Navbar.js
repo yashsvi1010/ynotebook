@@ -13,8 +13,8 @@ export const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid text-light">
-          <Link className="navbar-brand" to="/">
-            Navbar
+          <Link className="navbar-brand fw-bolder" to="/">
+            yNotebook <i class="fa-regular fa-clipboard"></i>
           </Link>
           <button
             className="navbar-toggler"
@@ -36,6 +36,8 @@ export const Navbar = () => {
                   }`}
                   aria-current="page"
                   to="/"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
                 >
                   Home
                 </Link>
@@ -46,22 +48,20 @@ export const Navbar = () => {
                     location.pathname === "/about" ? "active" : ""
                   }`}
                   to="/about"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
                 >
                   About
                 </Link>
               </li>
             </ul>
             {!localStorage.getItem("token") ? (
-              <form className="d-flex">
-                <Link
-                  className="btn btn-primary mx-1"
-                  to="/login"
-                  role="button"
-                >
+              <form className="d-flex ">
+                <Link className="btn signin-btn me-2" to="/login" role="button">
                   Login
                 </Link>
                 <Link
-                  className="btn btn-primary mx-1"
+                  className="btn signup-btn ms-2"
                   to="/signup"
                   role="button"
                 >
@@ -69,10 +69,9 @@ export const Navbar = () => {
                 </Link>
               </form>
             ) : (
-              <button
-                onClick={handleLogout}
-                className="btn btn-primary"
-              ></button>
+              <button onClick={handleLogout} className=" logout-btn">
+                Logout
+              </button>
             )}
           </div>
         </div>

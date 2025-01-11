@@ -22,7 +22,7 @@ const AddNote = () => {
 
   return (
     <div className="container">
-      <h2>Add a Note</h2>
+      <h2 style={{ borderBottom: "2px solid black" }}>Add a Note</h2>
       <form className="my-3">
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
@@ -78,10 +78,22 @@ const AddNote = () => {
         <button
           disabled={note.title.length < 3 || note.description.length < 3}
           type="submit"
-          className="btn btn-primary"
+          className="btn addNote-btn"
           onClick={handleClick}
         >
-          Add Note
+          <svg
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <span style={{ color: "white" }}>Add</span>
         </button>
       </form>
     </div>

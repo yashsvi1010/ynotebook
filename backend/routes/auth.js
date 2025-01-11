@@ -12,7 +12,7 @@ const JWT_SECRET = "Stilli@mhere101";
 router.post(
   "/createuser",
   [
-    body("name", "Enter a valid name").isLength({ min: 1 }),
+    body("name", "Enter a valid name").isLength({ min: 3 }),
     body("email", "Enter a valid email").isEmail(),
     body("password", " Password must be atleast 5 character").isLength({
       min: 1,
@@ -33,12 +33,10 @@ router.post(
       let user = await User.findOne({ email: req.body.email });
 
       if (user) {
-        return res
-          .status(400)
-          .json({
-            success,
-            error: "Sorry a user with this email already exists",
-          });
+        return res.status(400).json({
+          success,
+          error: "Sorry a user with this email already exists",
+        });
       }
 
       // Securing password by using salt- bycrypt
