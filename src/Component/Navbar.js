@@ -14,7 +14,7 @@ export const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid text-light">
           <Link className="navbar-brand fw-bolder" to="/">
-            yNotebook <i class="fa-regular fa-clipboard"></i>
+            yNotebook <i className="fa-regular fa-clipboard"></i>
           </Link>
           <button
             className="navbar-toggler"
@@ -36,8 +36,6 @@ export const Navbar = () => {
                   }`}
                   aria-current="page"
                   to="/"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
                 >
                   Home
                 </Link>
@@ -48,7 +46,6 @@ export const Navbar = () => {
                     location.pathname === "/about" ? "active" : ""
                   }`}
                   to="/about"
-                  data-bs-toggle="collapse"
                   data-bs-target=".navbar-collapse.show"
                 >
                   About
