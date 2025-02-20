@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid text-light">
           <Link className="navbar-brand fw-bolder" to="/">
             yNotebook <i className="fa-regular fa-clipboard"></i>

@@ -5,14 +5,15 @@ body {
   font-family: "Playwrite DE Grund", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: rgb(238, 174, 202);
+  background: rgb(201, 200, 185);
   background: radial-gradient(
     circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(160, 233, 148, 1) 100%
+    rgba(201, 200, 185, 1) 0%,
+    rgba(90, 76, 66, 1) 100%
   );
 }
 .navbar {
+  background: #c9c8b9;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 .navbar-toggler {
@@ -31,12 +32,7 @@ body {
   font-size: 15px;
   padding: 0.4em 1.1em 0.4em 1.1em;
   color: white;
-  background: #ad5389;
-  background: linear-gradient(
-    0deg,
-    rgba(20, 167, 62, 1) 0%,
-    rgba(102, 247, 113, 1) 100%
-  );
+  background: #5a4c42;
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
   letter-spacing: 0.05em;
@@ -56,14 +52,9 @@ body {
   font-size: 16px;
   padding: 0.7em 1.4em 0.7em 1.1em;
   color: white;
-  background: #ad5389;
-  background: linear-gradient(
-    0deg,
-    rgba(20, 167, 62, 1) 0%,
-    rgba(102, 247, 113, 1) 100%
-  );
+  background: #c9c8b9;
   border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+
   letter-spacing: 0.05em;
   border-radius: 20em;
 }
@@ -84,10 +75,14 @@ body {
 }
 
 /* card */
+
 .card {
-  border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  border-radius: 0.5rem;
+  background: #c9c8b9;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.noteItem--btn {
+  border: #282c34;
 }
 .App-header {
   background-color: #282c34;
